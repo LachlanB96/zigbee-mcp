@@ -1,14 +1,21 @@
 {
   "name": "zigbee-mcp",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "MCP server for controlling Zigbee devices via Zigbee2MQTT",
   "type": "module",
-  "main": "server.js",
+  "main": "server.ts",
   "bin": {
-    "zigbee-mcp": "./server.js"
+    "zigbee-mcp": "./server.ts"
+  },
+  "scripts": {
+    "start": "bun server.ts",
+    "test": "bun test"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0",
     "mqtt": "^5.10.0"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.3"
   }
 }
