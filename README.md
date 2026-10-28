@@ -1,5 +1,15 @@
 # zigbee-mcp
 
+## Archived
+
+I don't use this any more. For my own lights, an MCP server turned out to be the wrong tool.
+
+Every Claude Code session started its own copy, each with its own connection to the broker, and in all the time it ran the only thing a session ever asked it for was the device list. It was also a second way to the lights that skipped the rest of my setup. My phone, voice commands, a Zigbee cube and a dashboard all go through one small engine with a command line, which keeps a history of every command, hands the lights back properly after a music sync, and reaches the lights that aren't on Zigbee. Claude uses that same command line now. A tool call already costs a few seconds of model time, so a server that's always running doesn't make anything noticeably quicker.
+
+If your client has no shell, an MCP server still makes sense, and this one should keep working with Zigbee2MQTT. It just won't get any more updates.
+
+## About
+
 A Model Context Protocol server that exposes Zigbee2MQTT device control as typed tools for AI Harness (Claude code).
 
 ## Description
